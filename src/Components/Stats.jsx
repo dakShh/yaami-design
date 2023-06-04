@@ -17,18 +17,18 @@ const Stats = () => {
         )}
       >
         <div className="w-full h-full bg-black/60 absolute"></div>
-        <div className="font-semibold text-2xl z-50" data-aos="fade-left" data-aos-delay="300">
+        <div className="font-semibold text-2xl z-50" data-aos="fade-down" data-aos-delay="300">
           WE WORK FOR
         </div>
         <div
           className="font-extrabold text-5xl z-50 text-center"
-          data-aos="fade-left"
+          data-aos="fade-down"
           data-aos-delay="500"
         >
           INSURING YOUR FUTURE
         </div>
       </div>
-      <div className="px-5 w-full" data-aos="zoom-out" data-aos-delay="100">
+      <div className="px-5 w-full" data-aos="zoom-in" data-aos-delay="100">
         <div
           className={clsx(
             "z-[100] relative",
