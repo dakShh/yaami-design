@@ -6,10 +6,19 @@ import { servicesData } from "../Utils/data";
 // ** Third party imports
 import clsx from "clsx";
 
+import Wave1 from "../assets/svgs/waves-1.svg";
+
 const Service = () => {
   const { title, subTitle, services } = servicesData;
   return (
-    <section className="py-10 md:py-32">
+    <section
+      className={clsx("py-10 md:py-20", "relative")}
+      // style={{ backgroundImage: `url(${Wave1})` }}
+    >
+      <div
+        className={clsx("bg-no-repeat bg-cover w-full h-[600px] absolute bg-left")}
+        style={{ backgroundImage: `url(${Wave1})` }}
+      ></div>
       <div className="container mx-auto">
         <div className="text-center mb-16 md:mb-24">
           <div

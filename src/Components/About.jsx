@@ -9,12 +9,13 @@ import { aboutData } from "../Utils/data";
 // ** Image import
 import About1 from "../assets/about/about-1.jpg";
 import About2 from "../assets/about/about-2.jpg";
+
 const About = () => {
   const { title, quote, content } = aboutData;
 
   return (
-    <section className="container mx-auto py-32 overflow-hidden lg:h-[650px]">
-      <div className={clsx("grid md:grid-cols-4 grid-cols-1")}>
+    <section className={clsx("py-32 overflow-hidden lg:h-[650px]")}>
+      <div className={clsx("grid md:grid-cols-4 grid-cols-1", "container mx-auto")}>
         <div className={clsx("relative md:block hidden col-span-2")}>
           <img
             data-aos="fade-right"
