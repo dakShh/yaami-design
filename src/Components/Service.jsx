@@ -11,10 +11,7 @@ import Wave1 from "../assets/svgs/waves-1.svg";
 const Service = () => {
   const { title, subTitle, services } = servicesData;
   return (
-    <section
-      className={clsx("py-10 md:py-20", "relative")}
-      // style={{ backgroundImage: `url(${Wave1})` }}
-    >
+    <section className={clsx("py-10 md:py-20", "relative")}>
       <div
         className={clsx("bg-no-repeat bg-cover w-full h-[600px] absolute bg-left")}
         style={{ backgroundImage: `url(${Wave1})` }}
