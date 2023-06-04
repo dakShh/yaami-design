@@ -14,7 +14,7 @@ const About = () => {
   const { title, quote, content } = aboutData;
 
   return (
-    <section className={clsx("pt-32 pb-24 overflow-hidden lg:h-[650px]")}>
+    <section className={clsx("pt-9 overflow-hidden lg:h-[650px]")}>
       <div className={clsx("grid md:grid-cols-4 grid-cols-1", "container mx-auto")}>
         <div className={clsx("relative md:block hidden col-span-2")}>
           <img
