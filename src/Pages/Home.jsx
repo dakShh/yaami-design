@@ -4,12 +4,14 @@ import React from "react";
 import Hero from "../Components/Hero";
 import About from "../Components/About";
 import Service from "../Components/Service";
+import Stats from "../Components/Stats";
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <Service />
+      <Stats />
       <About />
     </div>
   );

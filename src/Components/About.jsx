@@ -13,7 +13,7 @@ const About = () => {
   const { title, quote, content } = aboutData;
 
   return (
-    <section className="container mx-auto py-20 overflow-hidden lg:h-[650px]">
+    <section className="container mx-auto py-32 overflow-hidden lg:h-[650px]">
       <div className={clsx("grid md:grid-cols-4 grid-cols-1")}>
         <div className={clsx("relative md:block hidden col-span-2")}>
           <img
