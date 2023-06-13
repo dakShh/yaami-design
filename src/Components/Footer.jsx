@@ -17,9 +17,9 @@ const Footer = () => {
           <div
             data-aos="flip-up"
             data-aos-delay="200"
-            className="text-5xl mb-16 lg:mb-0 font-extrabold text-center md:text-left"
+            className="text-5xl mb-16 lg:mb-0 font-bold text-center md:text-left"
           >
-            Yaami Designs
+            <span className="font-thin">Yaami</span> Designs
           </div>
           <div className="w-full flex flex-col gap-y-6">
             <div className="mb-8">
@@ -28,6 +28,7 @@ const Footer = () => {
                   {navData.map((item, index) => {
                     return (
                       <li
+                        key={index}
                         data-aos="fade-up"
                         data-aos-delay={`${200 * index}`}
                         className="text-white font-bold text-xl cursor-pointer"

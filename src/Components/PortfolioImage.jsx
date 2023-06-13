@@ -10,9 +10,9 @@ const PortfolioImage = ({ image_src, name, index }) => {
     setHoverState(state);
   }
 
-  console.log("hoverState : ", hoverState);
   return (
     <div
+      key={index}
       data-aos="fade-up"
       data-aos-delay={`${index * 100}`}
       data-aos-offset={`200`}

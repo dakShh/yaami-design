@@ -37,6 +37,7 @@ const Service = () => {
           {services.map((service, index) => {
             return (
               <div
+                key={index}
                 data-aos={service.aos}
                 data-aos-delay={service.delay}
                 className={clsx(

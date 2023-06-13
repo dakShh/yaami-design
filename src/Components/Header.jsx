@@ -24,7 +24,7 @@ const Header = () => {
               className={clsx("text-2xl font-bold", "cursor-pointer", "text-white")}
               onClick={() => navigate("/")}
             >
-              YAAMI DESIGNS
+              <span className="font-thin">YAAMI</span> DESIGNS
             </div>
 
             <div className="md:block hidden">

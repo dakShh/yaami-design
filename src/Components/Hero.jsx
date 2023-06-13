@@ -52,37 +52,38 @@ const Hero = () => {
             <PrimaryButton onClick={() => navigate("/portfolio")} content={"Portfolio"} />
           </div>
         </div>
-
-        <Swiper
-          centeredSlides={true}
-          autoplay={{
-            delay: 3200,
-            disableOnInteraction: false,
-          }}
-          navigation={true}
-          // Autoplay
-          modules={[Autoplay, Scrollbar, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className="h-screen flex justify-center items-center w-full relative">
-              <div className="w-full h-full bg-black/60 z-40 absolute"></div>
-              <img src={hero2} alt="" className="h-full object-cover w-full "></img>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-screen flex justify-center items-center w-full  relative">
-              <div className="w-full h-full bg-black/60 z-40 absolute"></div>
-              <img src={hero3} alt="" className="h-full object-cover w-full "></img>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-screen flex justify-center items-center w-full relative">
-              <div className="w-full h-full bg-black/60 z-40 absolute"></div>
-              <img src={hero4} alt="" className="h-full object-cover w-full "></img>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+        <div data-aos="zoom-out" data-aos-duration="1500">
+          <Swiper
+            centeredSlides={true}
+            autoplay={{
+              delay: 3200,
+              disableOnInteraction: false,
+            }}
+            navigation={true}
+            // Autoplay
+            modules={[Autoplay, Scrollbar, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="h-screen flex justify-center items-center w-full relative">
+                <div className="w-full h-full bg-black/60 z-40 absolute"></div>
+                <img src={hero2} alt="" className="h-full object-cover w-full "></img>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-screen flex justify-center items-center w-full  relative">
+                <div className="w-full h-full bg-black/60 z-40 absolute"></div>
+                <img src={hero3} alt="" className="h-full object-cover w-full "></img>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-screen flex justify-center items-center w-full relative">
+                <div className="w-full h-full bg-black/60 z-40 absolute"></div>
+                <img src={hero4} alt="" className="h-full object-cover w-full "></img>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );

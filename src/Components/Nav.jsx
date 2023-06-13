@@ -15,6 +15,7 @@ const Nav = () => {
         {navData.map((item, index) => {
           return (
             <li
+              key={index}
               className="text-white font-medium cursor-pointer"
               onClick={() => navigate(item.href)}
             >
