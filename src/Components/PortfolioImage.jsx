@@ -14,17 +14,11 @@ const PortfolioImage = ({ image_src, name, index }) => {
   return (
     <div
       data-aos="fade-up"
-      data-aos-delay={`${index * 1}00`}
+      data-aos-delay={`${index * 100}`}
+      data-aos-offset={`200`}
       onMouseOver={() => changeHoverState(true)}
       onMouseLeave={() => changeHoverState(false)}
-      className={clsx(
-        "",
-        "relative",
-        " w-full ",
-        "aspect-square",
-        "overflow-hidden",
-        "cursor-pointer"
-      )}
+      className={clsx("relative", " w-full ", "aspect-square", "overflow-hidden", "cursor-pointer")}
     >
       <div
         className={`${"transition-opacity duration-[390ms] ease-out opacity-0 hover:opacity-100"} w-full h-full z-50 ${

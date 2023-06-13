@@ -83,7 +83,7 @@ const Portfolio = () => {
           <div className="text-xl font-extralight">All</div>
           PROJECTS
         </div>
-        <div className={clsx("grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4", "w-full", "gap-3")}>
+        <div className={clsx("grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4", "w-full", "gap-1")}>
           {portfolios.map((image, index) => {
             return <PortfolioImage image_src={image.image_src} name={image.name} index={index} />;
           })}
