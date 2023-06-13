@@ -9,7 +9,7 @@ import { AiOutlineWhatsApp, AiOutlineFacebook, AiOutlineInstagram } from "react-
 
 const Footer = () => {
   return (
-    <footer className="bg-stone-800 text-accent-primary" data-aos="fade-up" data-aos-delay="200">
+    <footer className="bg-stone-800 text-accent-primary" data-aos="fade-down" data-aos-delay="200">
       <div className={clsx("container mx-auto ", "py-20 px-20")}>
         <div className={clsx("flex flex-col lg:flex-row w-full")}>
           <div className="text-5xl mb-16 lg:mb-0 font-extrabold text-center md:text-left">

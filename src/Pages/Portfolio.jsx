@@ -43,6 +43,8 @@ const Portfolio = () => {
       <Header />
 
       <div
+        data-aos="zoom-in-up"
+        data-aos-delay="400"
         style={{
           backgroundImage: `url(${Banner1})`,
           backgroundPositionY: "55%",
