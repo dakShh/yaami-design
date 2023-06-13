@@ -40,13 +40,15 @@ const AboutUs = () => {
       </div>
 
       <div className="container mx-auto min-h-[50vh]">
-        <div className={clsx("flex justify-center items-center", " mx-6")}>
-          <div className={clsx("pt-5 px-10 pb-10")}>
-            {/* <p className="mb-5">About Us</p> */}
+        <div className={clsx("flex justify-center items-center", " mx-6 mb-10")}>
+          <div className={clsx("md:pt-5 md:px-10 md:pb-10", "pt-5 px-0  pb-20")}>
+            <p data-aos="fade-up" data-aos-delay="800" className="text-3xl mb-5">
+              YAAMI DESIGNS
+            </p>
             <div
               data-aos="fade-up"
               data-aos-delay="1000"
-              className="text-2xl font-extralight text-justify"
+              className="text-md md:text-2xl font-extralight text-justify"
             >
               It is a long established fact that a reader will be distracted by the readable content
               of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
