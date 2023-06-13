@@ -1,13 +1,26 @@
 import React from "react";
 
+// ** Third Party
+import { useNavigate } from "react-router-dom";
+
 // ** Data import
 import { navData } from "../Utils/data";
+
 const Nav = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <ul className="flex gap-x-12">
         {navData.map((item, index) => {
-          return <li className="text-white font-medium">{item.name}</li>;
+          return (
+            <li
+              className="text-white font-medium cursor-pointer"
+              onClick={() => navigate(item.href)}
+            >
+              {item.name}
+            </li>
+          );
         })}
       </ul>
     </div>

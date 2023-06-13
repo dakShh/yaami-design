@@ -8,19 +8,19 @@ import { LuLampCeiling } from "react-icons/lu";
 export const navData = [
   {
     name: "Home",
-    href: "#",
+    href: "/",
   },
   {
     name: "Porfolio",
-    href: "#",
+    href: "/portfolio",
   },
   {
     name: "About",
-    href: "#",
+    href: "/about-us",
   },
   {
     name: "Contact",
-    href: "#",
+    href: "/contact-us",
   },
 ];
 
