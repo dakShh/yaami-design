@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="mt-[-72px] relative">
         <div
           className={clsx(
-            "absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-50",
+            "absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-20",
             "xl:text-6xl md:text-5xl text-4xl font-extrabold",
             "text-white",
             "sm:whitespace-nowrap",
