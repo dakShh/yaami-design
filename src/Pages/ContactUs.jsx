@@ -1,24 +1,102 @@
 import React from "react";
 import clsx from "clsx";
+import Header from "../Components/Header";
 
+import Banner1 from "../assets/contact/banner-3.jpg";
+import Footer from "../Components/Footer";
+
+import { AiTwotoneHome } from "react-icons/ai";
+import { IoCall } from "react-icons/io5";
+import { BsFillPhoneFill, BsClockFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 const ContactUs = () => {
   return (
-    <div className="container mx-auto">
-      <div className={clsx("flex justify-center items-center", "my-20 mx-6")}>
-        <div className={clsx("pt-5 px-10 pb-10", "backdrop-blur-sm bg-white/40", "max-w-4xl")}>
-          <p className="mb-5">Contact Us</p>
+    <div>
+      <Header />
+      <div
+        data-aos="zoom-in-up"
+        data-aos-delay="400"
+        style={{
+          backgroundImage: `url(${Banner1})`,
+          backgroundPositionY: "44%",
+          backgroundPositionX: "30%",
+          backgroundRepeat: "repeat",
+        }}
+        className={clsx(
+          "relative",
+          "h-[320px] ",
+          "flex flex-col justify-center items-center",
+          "my-5"
+        )}
+      >
+        <div className="w-full h-full bg-black/70 absolute"></div>
+
+        <div
+          className="font-extrabold text-5xl z-50 text-center mb-3"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
+          Contact US
+        </div>
+        <div className="font-thin text-md z-50 " data-aos="fade-down" data-aos-delay="300">
+          Home / Contact US
+        </div>
+      </div>
+
+      <div className="container mx-auto min-h-[80vh]">
+        <div className={clsx("flex justify-around  p-5")}>
+          <div className={clsx("py-14")}>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="500"
+              className={clsx("text-5xl font-thin", "mb-8 ")}
+            >
+              CONTACT INFO
+            </div>
+            <div className="max-w-md mb-10" data-aos="fade-right" data-aos-delay="600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula orci at neque
+              venenatis molestie. Donec quis tincidunt ligula. Duis.
+            </div>
+            <div className="flex flex-col gap-y-3" data-aos="fade-up" data-aos-delay="700">
+              <div className={clsx("flex items-center gap-x-4")}>
+                <AiTwotoneHome className="text-xl text-white/60" />
+                <div className="text-white/60 font-thin max-w-[290px] sm:max-w-sm">
+                  E2 Wing, Kailash Co Op Hsg Society, 293 Belasis Road, Mumbai, Maharashtra
+                </div>
+              </div>
+
+              <div className={clsx("flex items-center gap-x-4")}>
+                <BsFillPhoneFill className="text-white/60 text-xl" />
+                <div className="text-white/60">{`(+91) 97694 37843`}</div>
+              </div>
+
+              <div className={clsx("flex items-center gap-x-4")}>
+                <IoCall className="text-white/60 text-xl" />
+                <div className="text-white/60"> {`(+91) 97694 37843`}</div>
+              </div>
+
+              <div className={clsx("flex items-center gap-x-4")}>
+                <MdEmail className="text-white/60 text-xl" />
+                <div className="text-white/60"> {`yaami.designs@gmail.com`}</div>
+              </div>
+
+              <div className={clsx("flex items-center gap-x-4")}>
+                <BsClockFill className="text-white/60 text-xl" />
+                <div className="text-white/60"> {`Monday to Friday  (09:00 - 21:00) `}</div>
+              </div>
+
+              <div className={clsx("flex items-center gap-x-4")}>
+                <BsClockFill className="text-white/60 text-xl" />
+                <div className="text-white/60"> {`Saturday / Sunday  (09:00 - 15:00) `}</div>
+              </div>
+            </div>
+          </div>
           <div>
-            It is a long established fact that a reader will be distracted by the readable content
-            of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing packages and web
-            page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-            ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-            over the years, sometimes by accident, sometimes on purpose (injected humour and the
-            like).
+            <div></div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
