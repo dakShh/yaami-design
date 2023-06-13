@@ -4,8 +4,12 @@ import React from "react";
 import clsx from "clsx";
 
 const PrimaryButton = ({ onClick, content }) => {
+  function handleAction() {
+    onClick();
+  }
   return (
     <button
+      onClick={handleAction}
       className={clsx(
         "bg-secondary hover:bg-accent-secondary",
         "md:py-4 md:px-6 px-4 py-2",

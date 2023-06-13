@@ -15,8 +15,10 @@ import "swiper/css/scrollbar";
 import Header from "./Header";
 import clsx from "clsx";
 import PrimaryButton from "./Buttons/primary-button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="h-screen w-full  ">
       <Header />
@@ -47,7 +49,7 @@ const Hero = () => {
             homes.
           </div>
           <div data-aos="fade-right" data-aos-delay="800">
-            <PrimaryButton content={"Portfolio"} />
+            <PrimaryButton onClick={() => navigate("/portfolio")} content={"Portfolio"} />
           </div>
         </div>
 

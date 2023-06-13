@@ -4,6 +4,7 @@ import Routes from "./Components/Routes";
 // ** Animate on scroll
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   Aos.init({
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <div>
+      <ScrollToTop />
       <Routes />
     </div>
   );
