@@ -51,7 +51,6 @@ const Service = () => {
           <div
             className={clsx(
               'flex flex-col w-full gap-y-2',
-              // 'grid sm:grid-cols-2 gap-5',
               'bg-accent-primary',
               'rounded-xl',
               'mx-auto p-5'
