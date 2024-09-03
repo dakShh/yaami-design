@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 // ** Component import
-import Hero from "../Components/Hero";
-import About from "../Components/About";
-import Service from "../Components/Service";
-import Stats from "../Components/Stats";
-import Footer from "../Components/Footer";
+import Hero from '../Components/Hero'
+import About from '../Components/About'
+import Service from '../Components/Service'
+import Stats from '../Components/Stats'
+import Footer from '../Components/Footer'
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <About />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
