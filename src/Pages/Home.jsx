@@ -7,6 +7,7 @@ import Service from '../Components/HomePage/Service'
 import Stats from '../Components/HomePage/Stats'
 import Footer from '../Components/Footer'
 import CTA from '../Components/HomePage/CTA'
+import Footer2 from '../Components/Footer2'
 
 const Home = () => {
   return (
@@ -16,7 +17,8 @@ const Home = () => {
       <Stats />
       {/* <About /> */}
       <CTA />
-      <Footer />
+      <Footer2 />
+      {/* <Footer /> */}
     </div>
   )
 }

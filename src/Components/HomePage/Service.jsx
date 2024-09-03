@@ -8,14 +8,14 @@ import clsx from 'clsx'
 
 // import { FaCircle } from 'react-icons/fa'
 
-import Wave1 from '../../assets/svgs/waves-1.svg'
+// import Wave1 from '../../assets/svgs/waves-1.svg'
 const Service = () => {
   const { title, subTitle, services, serviceList } = servicesData
   return (
     <section className={clsx('py-10 md:py-16', 'relative')}>
       <div
         className={clsx('bg-no-repeat bg-cover w-full h-[600px] absolute bg-left')}
-        style={{ backgroundImage: `url(${Wave1})` }}
+        // style={{ backgroundImage: `url(${Wave1})` }}
       ></div>
       <div className='z-10 relative container mx-auto'>
         <div className='mb-16 md:mb-24'>
