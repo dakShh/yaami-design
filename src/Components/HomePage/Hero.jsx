@@ -20,9 +20,9 @@ import { useNavigate } from 'react-router-dom'
 const Hero = () => {
   const navigate = useNavigate()
   return (
-    <div className='h-screen w-full  '>
+    <div className='h-screen w-full  relative'>
       <Header />
-      <div className='mt-[-72px] relative'>
+      <div className='mt-[0] relative'>
         <div
           className={clsx(
             'absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-20',
