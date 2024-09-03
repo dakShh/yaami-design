@@ -4,24 +4,24 @@ import React from 'react'
 import clsx from 'clsx'
 
 // ** Background image
-import Stats1 from '../assets/stats/stats-1.jpg'
+import Stats1 from '../../assets/stats/stats-1.jpg'
 const Stats = () => {
   return (
-    <section className='pb-10'>
+    <section className='bg-secondary'>
       <div
         style={{ backgroundImage: `url(${Stats1})` }}
         className={clsx('relative', 'h-[400px] bg-center', 'flex flex-col justify-center items-center')}
       >
         <div className='w-full h-full bg-black/60 absolute'></div>
-        <div className='font-semibold text-2xl z-50' data-aos='fade-down' data-aos-delay='300'>
-          WE WORK FOR
+        <div className='font-semibold text-xl z-50 ' data-aos='fade-down' data-aos-delay='300'>
+          Transforming spaces
         </div>
         <div
-          className='font-extrabold text-5xl z-50 text-center'
+          className='font-extrabold text-5xl z-50 text-center capitalize'
           data-aos='fade-down'
           data-aos-delay='500'
         >
-          INSURING YOUR FUTURE
+          One number at a time
         </div>
       </div>
       <div className='px-5 w-full' data-aos='zoom-in' data-aos-delay='100'>
@@ -41,7 +41,7 @@ const Stats = () => {
             )}
           >
             <div data-aos='fade-up' data-aos-delay='500' className='font-extrabold text-5xl md:text-6xl'>
-              239
+              154
             </div>
             <div
               data-aos='fade-up'
@@ -58,7 +58,7 @@ const Stats = () => {
             )}
           >
             <div data-aos='fade-up' data-aos-delay='500' className='font-extrabold text-5xl md:text-6xl'>
-              340
+              120
             </div>
             <div
               data-aos='fade-up'
@@ -75,7 +75,7 @@ const Stats = () => {
             )}
           >
             <div data-aos='fade-up' data-aos-delay='500' className='font-extrabold text-5xl md:text-6xl'>
-              15+
+              10+
             </div>
             <div
               data-aos='fade-up'

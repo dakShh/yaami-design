@@ -1,11 +1,12 @@
 import React from 'react'
 
 // ** Component import
-import Hero from '../Components/Hero'
-import About from '../Components/About'
-import Service from '../Components/Service'
-import Stats from '../Components/Stats'
+import Hero from '../Components/HomePage/Hero'
+// import About from '../Components/HomePage/About'
+import Service from '../Components/HomePage/Service'
+import Stats from '../Components/HomePage/Stats'
 import Footer from '../Components/Footer'
+import CTA from '../Components/HomePage/CTA'
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
       <Hero />
       <Service />
       <Stats />
-      <About />
+      {/* <About /> */}
+      <CTA />
       <Footer />
     </div>
   )

@@ -1,13 +1,14 @@
 import React from 'react'
 
 // ** Data import
-import { servicesData } from '../Utils/data'
+import { servicesData } from '../../Utils/data'
 
 // ** Third party imports
 import clsx from 'clsx'
 
-import Wave1 from '../assets/svgs/waves-1.svg'
-import residentalImage from '../assets/service/residental-service.jpg'
+// import { FaCircle } from 'react-icons/fa'
+
+import Wave1 from '../../assets/svgs/waves-1.svg'
 const Service = () => {
   const { title, subTitle, services, serviceList } = servicesData
   return (
@@ -53,13 +54,13 @@ const Service = () => {
               'flex flex-col w-full gap-y-2',
               'bg-accent-primary',
               'rounded-xl',
-              'mx-auto p-5'
+              'mx-auto px-5 pt-4'
             )}
           >
-            <div className='text-accent-secondary font-bold text-lg'>What we offer</div>
+            <div className='text-accent-secondary font-bold text-xl'>What we offer</div>
             {serviceList.map((service, index) => {
               return (
-                <div key={index} className={clsx('text-accent-secondary', 'rounded-xl ')}>
+                <div key={index} className={clsx('text-accent-secondary', 'rounded-xl')}>
                   <div className={clsx(' text-sm font-normal mb-0')}>{service}</div>
                 </div>
               )
