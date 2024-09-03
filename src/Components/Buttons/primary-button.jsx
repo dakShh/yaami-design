@@ -11,10 +11,12 @@ const PrimaryButton = ({ onClick, content }) => {
     <button
       onClick={handleAction}
       className={clsx(
-        'text-accent-secondary bg-accent-primary',
-        'md:py-4 md:px-6 px-4 py-2',
-        'rounded',
-        'md:text-2xl text-xl font-medium transition-all'
+        'min-w-[150px]',
+        'transition-all',
+        'text-stone-200 bg-yellow-600 text-lg',
+        'text-white font-bold  text-lg',
+        'px-5 py-3 text-center',
+        'border-0 hover: border-stone-800 font-bold rounded-full'
       )}
     >
       {content}

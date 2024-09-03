@@ -4,6 +4,7 @@ import React from 'react'
 import clsx from 'clsx'
 
 import Wave1 from '../../assets/svgs/waves-1.svg'
+import PrimaryButton from '../Buttons/primary-button'
 const CTA = () => {
   return (
     // <section
@@ -22,16 +23,17 @@ const CTA = () => {
             Customised services
           </h2>
           <p className='mb-6 font-light text-accent-primary md:text-lg '>
-            Can't find what you're looking for? We’ll design your home the way you like, keeping your
-            needs and budget in mind.
+            Can&apos;t find what you&apos;re looking for? We’ll design your home the way you like,
+            keeping your needs and budget in mind.
           </p>
         </div>
-        <button
+        {/* <button
           type='button'
-          className='inline-flex items-center text-secondary bg-accent-primary font-semibold rounded-lg text-2xl px-5 py-3 text-center'
+          className='items-center text-secondary bg-accent-primary font-semibold rounded-lg text-2xl px-5 py-3 text-center'
         >
           Request a Quote
-        </button>
+        </button> */}
+        <PrimaryButton content='Get a quote' />
       </div>
     </section>
   )

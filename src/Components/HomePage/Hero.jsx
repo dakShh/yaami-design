@@ -49,7 +49,7 @@ const Hero = () => {
             homes.
           </div>
           <div data-aos='fade-right' data-aos-delay='800'>
-            <PrimaryButton onClick={() => navigate('/portfolio')} content={'Portfolio'} />
+            <PrimaryButton onClick={() => navigate('/portfolio')} content={'Get a quote'} />
           </div>
         </div>
         <div data-aos='zoom-out' data-aos-duration='1500'>
@@ -66,19 +66,19 @@ const Hero = () => {
           >
             <SwiperSlide>
               <div className='h-screen flex justify-center items-center w-full relative'>
-                <div className='w-full h-full bg-black/60 z-40 absolute'></div>
+                <div className='w-full h-full bg-black/70 z-40 absolute'></div>
                 <img src={hero2} alt='' className='h-full object-cover w-full '></img>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='h-screen flex justify-center items-center w-full  relative'>
-                <div className='w-full h-full bg-black/60 z-40 absolute'></div>
+                <div className='w-full h-full bg-black/70 z-40 absolute'></div>
                 <img src={hero3} alt='' className='h-full object-cover w-full '></img>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='h-screen flex justify-center items-center w-full relative'>
-                <div className='w-full h-full bg-black/60 z-40 absolute'></div>
+                <div className='w-full h-full bg-black/70 z-40 absolute'></div>
                 <img src={hero4} alt='' className='h-full object-cover w-full '></img>
               </div>
             </SwiperSlide>
