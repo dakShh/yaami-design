@@ -78,12 +78,14 @@ const Service = () => {
             <div className='text-neutral-700 font-bold text-xl lg:text-3xl'>What we offer</div>
             <div className='w-20 border-t'></div>
             <div
-              className={clsx(`${windowWidth < 500 ? 'grid grid-cols-3 gap-x-5 gap-y-2 mb-8' : 'mb-8'}`)}
+              className={clsx(`${windowWidth < 800 ? 'grid grid-cols-3 gap-x-5 gap-y-2 mb-8' : 'mb-8'}`)}
             >
               {serviceList.map((service, index) => {
                 return (
                   <div key={index} className={clsx('text-white', 'rounded-xl')}>
-                    <div className={clsx('text-sm lg:text-lg font-normal mb-0')}>{service}</div>
+                    <div className={clsx('text-xs sm:text-sm lg:text-lg font-normal mb-0')}>
+                      {service}
+                    </div>
                   </div>
                 )
               })}

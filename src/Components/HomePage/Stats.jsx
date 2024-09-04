@@ -5,6 +5,8 @@ import clsx from 'clsx'
 
 // ** Background image
 import Stats1 from '../../assets/stats/stats-1.jpg'
+import { companyStats } from '../../Utils/data'
+
 const Stats = () => {
   return (
     <section className='bg-secondary'>
@@ -13,15 +15,23 @@ const Stats = () => {
         className={clsx('relative', 'h-[400px] bg-center', 'flex flex-col justify-center items-center')}
       >
         <div className='w-full h-full bg-black/60 absolute'></div>
-        <div className='font-semibold text-xl z-50 ' data-aos='fade-down' data-aos-delay='300'>
-          Transforming spaces
+        <div
+          className={clsx('text-xl sm:text-2xl lg:text-3xl font-semibold', 'lg:mb-5 mb-2', 'z-50')}
+          data-aos='fade-down'
+          data-aos-delay='300'
+        >
+          Our Story
         </div>
         <div
-          className='font-extrabold text-5xl z-50 text-center capitalize'
+          className={clsx(
+            'lg:text-6xl sm:text-5xl text-3xl font-bold',
+            'text-center max-w-sm sm:max-w-lg md:max-w-full',
+            'z-50'
+          )}
           data-aos='fade-down'
           data-aos-delay='500'
         >
-          One number at a time
+          See how we&apos;ve helped others.
         </div>
       </div>
       <div className='px-5 w-full' data-aos='zoom-in' data-aos-delay='100'>
@@ -34,74 +44,32 @@ const Stats = () => {
             'bg-neutral-800 text-white'
           )}
         >
-          <div
-            className={clsx(
-              'flex flex-col lg:flex-row gap-x-1',
-              'text-center items-center lg:text-left lg:items-start'
-            )}
-          >
-            <div data-aos='fade-up' data-aos-delay='500' className='font-extrabold text-5xl md:text-6xl'>
-              154
-            </div>
-            <div
-              data-aos='fade-up'
-              data-aos-delay='700'
-              className='max-w-[80px] text-md md:text-base text-white/60 font-extralight py-2'
-            >
-              Projects Completed
-            </div>
-          </div>
-          <div
-            className={clsx(
-              'flex flex-col lg:flex-row gap-x-1',
-              'text-center items-center lg:text-left lg:items-start'
-            )}
-          >
-            <div data-aos='fade-up' data-aos-delay='500' className='font-extrabold text-5xl md:text-6xl'>
-              120
-            </div>
-            <div
-              data-aos='fade-up'
-              data-aos-delay='700'
-              className='max-w-[80px] text-md md:text-base text-white/60 font-extralight py-2'
-            >
-              Our Happy Clients
-            </div>
-          </div>
-          <div
-            className={clsx(
-              'flex flex-col lg:flex-row gap-x-1',
-              'text-center items-center lg:text-left lg:items-start'
-            )}
-          >
-            <div data-aos='fade-up' data-aos-delay='500' className='font-extrabold text-5xl md:text-6xl'>
-              10+
-            </div>
-            <div
-              data-aos='fade-up'
-              data-aos-delay='700'
-              className='max-w-[80px] text-md md:text-base text-white/60 font-extralight py-2'
-            >
-              Years of experience
-            </div>
-          </div>
-          <div
-            className={clsx(
-              'flex flex-col lg:flex-row gap-x-1',
-              'text-center items-center lg:text-left lg:items-start'
-            )}
-          >
-            <div data-aos='fade-up' data-aos-delay='500' className='font-extrabold text-5xl md:text-6xl'>
-              10
-            </div>
-            <div
-              data-aos='fade-up'
-              data-aos-delay='700'
-              className='max-w-[80px] text-md md:text-base text-white/60 font-extralight py-2'
-            >
-              On Going Projects
-            </div>
-          </div>
+          {companyStats.map((stat, index) => {
+            return (
+              <div
+                key={index}
+                className={clsx(
+                  'flex flex-col lg:flex-row gap-x-1',
+                  'text-center items-center lg:text-left lg:items-start'
+                )}
+              >
+                <div
+                  data-aos='fade-up'
+                  data-aos-delay='500'
+                  className='font-extrabold text-5xl md:text-6xl'
+                >
+                  {stat.value}
+                </div>
+                <div
+                  data-aos='fade-up'
+                  data-aos-delay='700'
+                  className='max-w-[80px] text-md md:text-base text-white/60 font-extralight py-2'
+                >
+                  {stat.title}
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

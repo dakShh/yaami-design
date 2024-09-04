@@ -133,3 +133,22 @@ export const servicesData = {
     // }
   ]
 }
+
+export const companyStats = [
+  {
+    title: 'Projects Completed',
+    value: 154
+  },
+  {
+    title: 'Our Happy Clients',
+    value: 120
+  },
+  {
+    title: 'Years of Experience',
+    value: '10+'
+  },
+  {
+    title: 'On Going Projects',
+    value: 10
+  }
+]
