@@ -42,7 +42,7 @@ export const servicesData = {
   title: 'Solutions',
   subTitle: 'Tailored solutions to transform your space',
   serviceList: [
-    'Design Concept / Discussion',
+    'Design Concept',
     'Floor Layout',
     'Floor Covering',
     'Electrical',

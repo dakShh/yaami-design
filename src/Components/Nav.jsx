@@ -16,7 +16,7 @@ const Nav = () => {
           return (
             <li
               key={index}
-              className='text-white text-sm font-medium cursor-pointer'
+              className='text-stone-300 text-sm font-medium cursor-pointer'
               onClick={() => navigate(item.href)}
             >
               {item.name}

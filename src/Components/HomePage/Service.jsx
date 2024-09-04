@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // ** Data import
 import { servicesData } from '../../Utils/data'
@@ -11,60 +11,83 @@ import clsx from 'clsx'
 // import Wave1 from '../../assets/svgs/waves-1.svg'
 const Service = () => {
   const { title, subTitle, services, serviceList } = servicesData
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  console.log(windowWidth)
+
   return (
     <section className={clsx('py-10 md:py-16', 'relative')}>
-      <div
+      {/* <div
         className={clsx('bg-no-repeat bg-cover w-full h-[600px] absolute bg-left')}
-        // style={{ backgroundImage: `url(${Wave1})` }}
-      ></div>
-      <div className='z-10 relative container mx-auto'>
-        <div className='mb-16 md:mb-24'>
+        style={{ backgroundImage: `url(${Wave1})` }}
+      ></div> */}
+      <div className='z-10 relative container mx-auto px-4 sm:px-0'>
+        <div className='mb-8 sm:mb-16 lg:mb-24'>
           <div
             data-aos='zoom-in-up'
             data-aos-delay='300'
-            className={clsx('text-3xl font-semibold', 'mb-5')}
+            className={clsx('text-xl sm:text-2xl lg:text-3xl font-semibold', 'mb-5')}
           >
             {title}
           </div>
           <div
             data-aos='zoom-in-up'
             data-aos-delay='500'
-            className={clsx('text-5xl md:text-6xl font-bold', 'max-w-lg')}
+            className={clsx('lg:text-6xl sm:text-5xl text-3xl font-bold', 'max-w-lg')}
           >
             {subTitle}
           </div>
         </div>
-        <div className={clsx('grid sm:grid-cols-3 gap-5 ', 'mx-auto md:p-0 px-10', 'mb-4')}>
+        <div className={clsx('grid md:grid-cols-3 grid-cols-2 gap-8 ', 'mx-auto', 'mb-4')}>
           {services.map((service, index) => {
             return (
-              <div key={index} className=' bg-accent-primary rounded-lg shadow '>
+              <div key={index} className={clsx(' bg-yellow-600 rounded-2xl shadow overflow-hidden')}>
                 <img
-                  className='flex rounded-t-lg object-cover object-center h-72 w-full'
+                  className='flex object-cover object-center h-56 lg:h-80 w-full'
                   src={service.imageUrl}
                   alt=''
                 />
-                <div className='p-5'>
-                  <h5 className='text-2xl font-bold tracking-tight text-secondary '>{service.title}</h5>
+                <div className='px-5 pt-2 lg:pb-5 pb-3'>
+                  <h5 className='text-center text-base md:text-lg lg:text-2xl font-normal tracking-tight text-white '>
+                    {service.title}
+                  </h5>
                 </div>
               </div>
             )
           })}
           <div
             className={clsx(
-              'flex flex-col w-full gap-y-2',
-              'bg-accent-primary',
+              'flex flex-col w-full gap-y-1 col-span-2 md:col-span-1',
+              'bg-yellow-600',
               'rounded-xl',
-              'mx-auto px-5 pt-4'
+              'mx-auto px-3 pt-2 lg:px-5 lg:pt-4'
             )}
           >
-            <div className='text-accent-secondary font-bold text-xl'>What we offer</div>
-            {serviceList.map((service, index) => {
-              return (
-                <div key={index} className={clsx('text-accent-secondary', 'rounded-xl')}>
-                  <div className={clsx(' text-sm font-normal mb-0')}>{service}</div>
-                </div>
-              )
-            })}
+            <div className='text-neutral-700 font-bold text-xl lg:text-3xl'>What we offer</div>
+            <div className='w-20 border-t'></div>
+            <div
+              className={clsx(`${windowWidth < 500 ? 'grid grid-cols-3 gap-x-5 gap-y-2 mb-8' : 'mb-8'}`)}
+            >
+              {serviceList.map((service, index) => {
+                return (
+                  <div key={index} className={clsx('text-white', 'rounded-xl')}>
+                    <div className={clsx('text-sm lg:text-lg font-normal mb-0')}>{service}</div>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -17,9 +17,7 @@ const Logo = (props) => {
         className='h-14'
         alt='yaami designs'
       />
-      <div className='self-center text-2xl font-semibold w-4 leading-none text-accent-primary'>
-        YAAMI DESIGNS
-      </div>
+      <div className='self-center text-2xl font-semibold w-4 leading-none text-white'>YAAMI DESIGNS</div>
     </div>
   )
 }
