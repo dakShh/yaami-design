@@ -25,7 +25,7 @@ const Service = () => {
     }
   }, [])
 
-  console.log(windowWidth)
+  // console.log(windowWidth)
 
   return (
     <section className={clsx('py-10 md:py-16', 'relative')}>
