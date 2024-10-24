@@ -98,39 +98,16 @@ export const servicesData = {
         'Painting',
         'Deep Cleaning'
       ]
+    },
+    {
+      title: 'Real Estate',
+      imageUrl: residentalServiceImage,
+      aos: 'zoom-out-up',
+      delay: '400',
+      icon: <BsFillHouseGearFill className='text-5xl text-accent-secondary/80' />,
+      description: '',
+      serviceList: ['Lease', 'Rent', 'Sale', 'Purchase', 'Heavy Deposite']
     }
-    // {
-    //   title: 'Retail Shop & Showroom',
-    //   aos: 'zoom-out-up',
-    //   delay: '600',
-    //   icon: <AiFillShop className='text-5xl text-accent-secondary/80' />,
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ligula aliquam, lobortis odio eu, consequat nibh.'
-    // },
-    // {
-    //   title: 'False Ceiling',
-    //   aos: 'zoom-out-up',
-    //   delay: '600',
-    //   icon: <LuLampCeiling className='text-5xl text-accent-secondary/80' />,
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ligula aliquam, lobortis odio eu, consequat nibh.'
-    // },
-    // {
-    //   title: 'Modular Kitchen',
-    //   aos: 'zoom-out-up',
-    //   delay: '700',
-    //   icon: <MdSoupKitchen className='text-5xl text-accent-secondary/80' />,
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ligula aliquam, lobortis odio eu, consequat nibh.'
-    // },
-    // {
-    //   title: 'Master Bathroom',
-    //   aos: 'zoom-out-up',
-    //   delay: '800',
-    //   icon: <FaShower className='text-5xl text-accent-secondary/80' />,
-    //   description:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ligula aliquam, lobortis odio eu, consequat nibh.'
-    // }
   ]
 }
 

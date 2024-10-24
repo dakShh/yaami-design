@@ -5,6 +5,7 @@ import { servicesData } from '../../Utils/data'
 
 // ** Third party imports
 import clsx from 'clsx'
+import HomepageCard from './Card/homepageCard'
 
 // import { FaCircle } from 'react-icons/fa'
 
@@ -53,21 +54,28 @@ const Service = () => {
         <div className={clsx('grid md:grid-cols-3 grid-cols-2 gap-8 ', 'mx-auto', 'mb-4')}>
           {services.map((service, index) => {
             return (
-              <div key={index} className={clsx(' bg-yellow-600 rounded-2xl shadow overflow-hidden')}>
-                <img
-                  className='flex object-cover object-center h-56 lg:h-80 w-full'
-                  src={service.imageUrl}
-                  alt=''
-                />
-                <div className='px-5 pt-2 lg:pb-5 pb-3'>
-                  <h5 className='text-center text-base md:text-lg lg:text-2xl font-normal tracking-tight text-white '>
-                    {service.title}
-                  </h5>
-                </div>
-              </div>
+              <HomepageCard
+                key={index}
+                title={service.title}
+                imgSrc={service.imageUrl}
+                windowWidth={windowWidth}
+                serviceList={service.serviceList}
+              />
+              // <div key={index} className={clsx(' bg-yellow-600 rounded-2xl shadow overflow-hidden')}>
+              //   <img
+              //     className='flex object-cover object-center h-56 lg:h-80 w-full'
+              //     src={service.imageUrl}
+              //     alt=''
+              //   />
+              //   <div className='px-5 pt-2 lg:pb-5 pb-3'>
+              //     <h5 className='text-center text-base md:text-lg lg:text-2xl font-normal tracking-tight text-white '>
+              //       {service.title}
+              //     </h5>
+              //   </div>
+              // </div>
             )
           })}
-          <div
+          {/* <div
             className={clsx(
               'flex flex-col w-full gap-y-1 col-span-2 md:col-span-1',
               'bg-yellow-600',
@@ -90,7 +98,7 @@ const Service = () => {
                 )
               })}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
