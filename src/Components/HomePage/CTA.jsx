@@ -28,9 +28,9 @@ const CTA = () => {
             keeping your needs and budget in mind.
           </p>
         </div>
-        <div>
+        {/* <div>
           <PrimaryButton content='Get a quote' />
-        </div>
+        </div> */}
       </div>
     </section>
   )
