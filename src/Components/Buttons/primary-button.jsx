@@ -3,13 +3,14 @@ import React from 'react'
 // ** Third party imports
 import clsx from 'clsx'
 
-const PrimaryButton = ({ onClick, content }) => {
+const PrimaryButton = ({ onClick, content, type }) => {
   function handleAction() {
-    onClick()
+    onClick ? onClick() : () => {}
   }
   return (
     <div>
       <button
+        type={type ?? 'button'}
         onClick={handleAction}
         className={clsx(
           'min-w-[150px]',
