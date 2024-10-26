@@ -24,11 +24,7 @@ const Service = () => {
   }, [])
 
   return (
-    <section className={clsx('py-10 md:py-16', 'relative')}>
-      {/* <div
-        className={clsx('bg-no-repeat bg-cover w-full h-[600px] absolute bg-left')}
-        style={{ backgroundImage: `url(${Wave1})` }}
-      ></div> */}
+    <section className={clsx('py-10 md:py-16', 'relative', 'bg-secondary')}>
       <div className='z-10 relative container mx-auto px-4 sm:px-0'>
         <div className='mb-8 sm:mb-16 lg:mb-24'>
           <div

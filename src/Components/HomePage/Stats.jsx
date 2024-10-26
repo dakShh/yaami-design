@@ -41,7 +41,8 @@ const Stats = () => {
             'container mx-auto',
             'grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-6',
             'py-10 px-5 mt-[-70px] w-full',
-            'bg-neutral-800 text-white'
+            'bg-neutral-800 text-white',
+            'drop-shadow-xl'
           )}
         >
           {companyStats.map((stat, index) => {

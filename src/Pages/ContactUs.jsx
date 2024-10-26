@@ -46,10 +46,10 @@ const ContactUs = () => {
           data-aos='fade-down'
           data-aos-delay='200'
         >
-          Contact US
+          Contact us
         </div>
         <div className='font-thin text-md z-50 ' data-aos='fade-down' data-aos-delay='300'>
-          Home / Contact US
+          {/* Home / Contact US */}
         </div>
       </div>
 

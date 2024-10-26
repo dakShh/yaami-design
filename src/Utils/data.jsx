@@ -85,7 +85,6 @@ export const servicesData = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ligula aliquam, lobortis odio eu, consequat nibh.',
       serviceList: [
-        'Introduction Metting',
         'Design Concept / Discution',
         'Floor Layout',
         'Floor Covering',
