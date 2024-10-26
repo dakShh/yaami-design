@@ -27,8 +27,6 @@ const Modal = ({ state, handleModal }) => {
     console.log('values: ', values)
   }
 
-  console.log('error: ', form.formState.errors)
-
   useEffect(() => {
     setShow(state)
     if (show) document.body.style.overflow = 'hidden'
@@ -80,7 +78,7 @@ const Modal = ({ state, handleModal }) => {
                       message: 'Username must be at least 3 characters long'
                     }
                   }}
-                  className={`${errors.name && 'border-red-600 focus:border-red-600'}`}
+                  className={``}
                   placeholder={'Eg: Daksh khatri'}
                   errorMessage={errors?.name?.message ?? ''}
                   autoComplete='off'
@@ -99,11 +97,8 @@ const Modal = ({ state, handleModal }) => {
                   register={register}
                   options={{
                     required: 'Phone number is required',
-                    minLength: {
-                      message: 'sex'
-                    },
                     pattern: {
-                      value: /^\d{10}$/, // E.164 international format or 10-digit format without country code
+                      value: /^\d{10}$/,
                       message: 'Please enter a valid phone number'
                     }
                   }}

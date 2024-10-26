@@ -12,7 +12,7 @@ import Modal from '../Components/Modal'
 // import Footer from '../Components/Footer'
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(true)
+  const [showModal, setShowModal] = useState(false)
 
   const handleModal = () => {
     setShowModal((prev) => !prev)
@@ -21,6 +21,24 @@ const Home = () => {
   useEffect(() => {
     console.log(showModal)
   }, [showModal])
+
+  useEffect(() => {
+    const handleMouseLeave = (e) => {
+      // Check if mouse leaves the top of the viewport and if modal has not been shown in the session
+      if (e.clientY <= 0 && !sessionStorage.getItem('modalShown')) {
+        setShowModal(true)
+        sessionStorage.setItem('modalShown', 'true') // Mark as shown in session
+      }
+    }
+
+    // Add the event listener for mouseleave
+    document.addEventListener('mouseleave', handleMouseLeave)
+
+    // Clean up event listener on component unmount
+    return () => {
+      document.removeEventListener('mouseleave', handleMouseLeave)
+    }
+  }, [])
 
   return (
     <div>

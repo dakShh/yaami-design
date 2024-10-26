@@ -49,31 +49,59 @@ const ContactUs = () => {
         >
           Contact us
         </div>
-        <div className='font-thin text-md z-50 ' data-aos='fade-down' data-aos-delay='300'>
-          {/* Home / Contact US */}
-        </div>
+        {/* <div className='font-thin text-md z-50 ' data-aos='fade-down' data-aos-delay='300'></div> */}
       </div>
 
       <div className='container mx-auto mt-[-80px] z-50 relative '>
-        <div className='mx-auto max-w-md bg-neutral-800 shadow-xl py-10 px-12 rounded-xl'>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-y-4 items-center'>
-            <Input
-              name='name'
-              register={form.register}
-              options={{ required: true }}
-              placeholder={'Eg: Daksh Khatri'}
-              autoComplete='off'
-            />
-            <Input
-              name='number'
-              register={form.register}
-              options={{ required: true }}
-              placeholder='+91-8888888888'
-              autoComplete='off'
-              type={'number'}
-            />
-            <div className='mt-8'>
-              <PrimaryButton type='submit' content={'Get a quote'} />
+        <div className='mx-auto max-w-xl bg-neutral-800 shadow-xl py-10 px-12 rounded-xl'>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-y-8'>
+            <div>
+              <label
+                htmlFor='number'
+                className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+              >
+                Name
+              </label>
+              <Input
+                name='name'
+                register={form.register}
+                options={{
+                  required: 'Please enter your name',
+                  minLength: {
+                    value: 3,
+                    message: 'Username must be at least 3 characters long'
+                  }
+                }}
+                placeholder={'Eg: Daksh Khatri'}
+                autoComplete='off'
+                errorMessage={form.formState?.errors?.name?.message}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor='number'
+                className=' block mb-2 text-sm font-medium text-gray-900 dark:text-white '
+              >
+                Number
+              </label>
+              <Input
+                name='number'
+                register={form.register}
+                options={{
+                  required: 'Phone number is required',
+                  pattern: {
+                    value: /^\d{10}$/, // E.164 international format or 10-digit format without country code
+                    message: 'Please enter a valid phone number'
+                  }
+                }}
+                placeholder='+91-8888888888'
+                autoComplete='off'
+                type={'number'}
+                errorMessage={form.formState?.errors?.number?.message}
+              />
+            </div>
+            <div className=' mx-auto'>
+              <PrimaryButton type='submit' content={'Submit'} />
             </div>
           </form>
         </div>
