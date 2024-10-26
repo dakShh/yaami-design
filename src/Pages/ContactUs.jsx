@@ -12,6 +12,7 @@ import { IoCall } from 'react-icons/io5'
 import { MdEmail } from 'react-icons/md'
 import { MdOutlineContactSupport } from 'react-icons/md'
 import InfoBlock from '../Components/ContactUs/infoBlock'
+import Input from '../Components/Input/input'
 
 const ContactUs = () => {
   const form = useForm({
@@ -56,24 +57,20 @@ const ContactUs = () => {
       <div className='container mx-auto mt-[-80px] z-50 relative '>
         <div className='mx-auto max-w-md bg-neutral-800 shadow-xl py-10 px-12 rounded-xl'>
           <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-y-4 items-center'>
-            <input
-              defaultValue='test'
-              {...form.register('name', { required: true })}
-              className={clsx(
-                'w-full ',
-                'py-3 px-5 block w-full  rounded-full text-sm focus:border-neutral-500 focus:ring-none focus:outline-none disabled:opacity-50 disabled:pointer-events-none text-white bg-transparent border border-neutral-500 '
-              )}
+            <Input
+              name='name'
+              register={form.register}
+              options={{ required: true }}
               placeholder={'Eg: Daksh Khatri'}
               autoComplete='off'
             />
-            <input
-              type={'number'}
-              {...form.register('number', { required: true })}
-              className={clsx(
-                'w-full',
-                'py-3 px-5 block w-full  rounded-full text-sm focus:border-neutral-500 focus:ring-none focus:outline-none disabled:opacity-50 disabled:pointer-events-none text-white bg-transparent border border-neutral-500'
-              )}
+            <Input
+              name='number'
+              register={form.register}
+              options={{ required: true }}
               placeholder='+91-8888888888'
+              autoComplete='off'
+              type={'number'}
             />
             <div className='mt-8'>
               <PrimaryButton type='submit' content={'Get a quote'} />

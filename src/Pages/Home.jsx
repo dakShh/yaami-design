@@ -12,7 +12,7 @@ import Modal from '../Components/Modal'
 // import Footer from '../Components/Footer'
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(true)
 
   const handleModal = () => {
     setShowModal((prev) => !prev)
@@ -28,10 +28,8 @@ const Home = () => {
       <Hero handleModal={handleModal} />
       <Service />
       <Stats />
-      {/* <About /> */}
       <CTA />
       <Footer2 />
-      {/* <Footer /> */}
     </div>
   )
 }
