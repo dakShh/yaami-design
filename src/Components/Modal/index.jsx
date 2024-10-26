@@ -3,8 +3,31 @@ import React, { useEffect, useState } from 'react'
 import Input from '../Input/input'
 import PrimaryButton from '../Buttons/primary-button'
 
+import { useForm } from 'react-hook-form'
+
+const defaultValues = {
+  name: '',
+  number: ''
+}
+
 const Modal = ({ state, handleModal }) => {
   const [show, setShow] = useState(false)
+
+  const form = useForm({
+    defaultValues
+  })
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors }
+  } = form
+
+  const onSubmit = (values) => {
+    console.log('values: ', values)
+  }
+
+  console.log('error: ', form.formState.errors)
 
   useEffect(() => {
     setShow(state)
@@ -38,8 +61,8 @@ const Modal = ({ state, handleModal }) => {
               X<span className='sr-only'>Close modal</span>
             </button>
           </div>
-          <form className='p-4 md:p-5'>
-            <div className='grid gap-4 mb-4 grid-cols-2'>
+          <form onSubmit={handleSubmit(onSubmit)} className='p-4 md:p-5'>
+            <div className='grid gap-7 mb-4 grid-cols-2'>
               <div className='col-span-2'>
                 <label
                   htmlFor='name'
@@ -47,20 +70,55 @@ const Modal = ({ state, handleModal }) => {
                 >
                   Name
                 </label>
-                <Input name='name' className={' '} placeholder={'Eg: Daksh khatri'} />
+                <Input
+                  name='name'
+                  register={register}
+                  options={{
+                    required: 'Please enter your name',
+                    minLength: {
+                      value: 3,
+                      message: 'Username must be at least 3 characters long'
+                    }
+                  }}
+                  className={`${errors.name && 'border-red-600 focus:border-red-600'}`}
+                  placeholder={'Eg: Daksh khatri'}
+                  errorMessage={errors?.name?.message ?? ''}
+                  autoComplete='off'
+                />
               </div>
 
               <div className='col-span-2'>
                 <label
-                  // for='description'
+                  htmlFor='number'
                   className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
                 >
                   Number
                 </label>
-                <Input name='number' type={'number'} placeholder={'+91-XXXXXXXXXX'} />
+                <Input
+                  name='number'
+                  register={register}
+                  options={{
+                    required: 'Phone number is required',
+                    minLength: {
+                      message: 'sex'
+                    },
+                    pattern: {
+                      value: /^\d{10}$/, // E.164 international format or 10-digit format without country code
+                      message: 'Please enter a valid phone number'
+                    }
+                  }}
+                  className={`${errors.number && 'border-red-600 focus:border-red-600'}`}
+                  type={'number'}
+                  placeholder={'+91-XXXXXXXXXX'}
+                  errorMessage={errors?.number?.message ?? ''}
+                />
               </div>
             </div>
-            <PrimaryButton content={'Submit'} className={'mx-auto flex mt-10 justify-center'} />
+            <PrimaryButton
+              type={'submit'}
+              content={'Submit'}
+              className={'mx-auto flex mt-10 justify-center'}
+            />
           </form>
         </div>
       </div>
