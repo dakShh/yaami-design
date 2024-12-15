@@ -37,9 +37,6 @@ const AboutUs = () => {
         </div>
       </div>
       <div className='container mx-auto min-h-screen mb-20'>
-        {/* <div className='mx-auto  py-6 '>
-          <h1 className='text-3xl font-bold text-center'>Yaami Designs</h1>
-        </div> */}
         <section>
           <div className='mb-7 w-full' data-aos='zoom-in' data-aos-delay='100'>
             <div
@@ -93,15 +90,7 @@ const AboutUs = () => {
               approach combines creativity with practicality, ensuring that each design not only looks
               stunning but also enhances the way you live.
             </p>
-            {/* <PrimaryButton  */}
           </div>
-          {/* <div className='mt-6 md:mt-0'>
-            <img
-              src='/placeholder.svg?height=400&width=400'
-              alt='Elara Johnson, Interior Designer'
-              className='rounded-full w-64 h-64 object-cover mx-auto'
-            />
-          </div> */}
         </section>
 
         <section className=''>

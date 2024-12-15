@@ -49,7 +49,6 @@ const ContactUs = () => {
         >
           Contact us
         </div>
-        {/* <div className='font-thin text-md z-50 ' data-aos='fade-down' data-aos-delay='300'></div> */}
       </div>
 
       <div className='container mx-auto mt-20 z-50 relative '>
