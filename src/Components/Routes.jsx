@@ -16,17 +16,17 @@ const WebRoutes = () => {
 
     setTimeout(() => {
       setLoading(false)
-    }, 800)
+    }, 600)
   }, [location])
 
   if (loading) {
     return (
-      <div className='h-screen w-full flex gap-x-3 justify-center items-center'>
-        <div className='font-thin text-4xl'> Yaami</div>
+      <div className='h-screen w-full flex  justify-center items-center'>
         <div className=' top-0 right-0 z-50 flex justify-center items-center'>
           <div className='animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-white'></div>
         </div>
-        <div className='font-bold text-4xl'>Designs</div>
+        <div className='font-thin text-xl ml-2'>Yaami</div>
+        <div className='font-bold text-xl'>Designs</div>
       </div>
     )
   }
