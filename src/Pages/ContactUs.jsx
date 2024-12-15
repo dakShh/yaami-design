@@ -38,7 +38,7 @@ const ContactUs = () => {
           backgroundPositionX: '30%',
           backgroundRepeat: 'repeat'
         }}
-        className={clsx('relative', 'h-[450px]', 'flex flex-col justify-center items-center', 'mb-5')}
+        className={clsx('relative', 'h-[250px]', 'flex flex-col justify-center items-center', 'mb-5')}
       >
         <div className='w-full h-full bg-black/70 absolute'></div>
 
@@ -52,7 +52,7 @@ const ContactUs = () => {
         {/* <div className='font-thin text-md z-50 ' data-aos='fade-down' data-aos-delay='300'></div> */}
       </div>
 
-      <div className='container mx-auto mt-[-80px] z-50 relative '>
+      <div className='container mx-auto mt-20 z-50 relative '>
         <div className='mx-auto max-w-xl bg-neutral-800 shadow-xl py-10 px-12 rounded-xl'>
           <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-y-8'>
             <div>
@@ -107,21 +107,21 @@ const ContactUs = () => {
         </div>
         <div className='grid grid-cols-3 my-24 gap-x-16 px-4'>
           <InfoBlock
-            icon={<MdEmail />}
+            icon={<MdEmail className={'h-12 w-12 mb-4 text-5xl'} />}
             title={'Email us'}
             description={
               'Have a project in mind or need more information about our interior design services? Send us an email, and we’ll be happy to assist.'
             }
           />
           <InfoBlock
-            icon={<IoCall />}
+            icon={<IoCall className={'h-12 w-12 mb-4 text-5xl'} />}
             title={'Speak with Us'}
             description={
               'Want to discuss your design ideas or need a quick consultation? Give us a call to connect directly with our team. We’re here to provide personalized advice and guidance for your space.'
             }
           />
           <InfoBlock
-            icon={<MdOutlineContactSupport />}
+            icon={<MdOutlineContactSupport className={'h-12 w-12 mb-4 text-5xl'} />}
             title={'Customer Support'}
             description={
               'For ongoing projects, technical assistance, or other inquiries, visit our support center. Explore FAQs, design tips, or submit a ticket for specialized help from our team.'
