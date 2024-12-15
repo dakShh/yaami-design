@@ -36,7 +36,7 @@ const AboutUs = () => {
           About us
         </div>
       </div>
-      <div className='container mx-auto min-h-screen mb-20'>
+      <div className='container mx-auto px-5 sm:px-0 min-h-screen mb-20'>
         <section>
           <div className='mb-7 w-full' data-aos='zoom-in' data-aos-delay='100'>
             <div
@@ -79,7 +79,7 @@ const AboutUs = () => {
           </div>
         </section>
         <section className='border-b border-white/40 pb-8 gap-8 items-center'>
-          <div className='flex  justify-center gap-x-10 text-md'>
+          <div className='flex flex-col md:flex-row justify-center gap-x-10 text-md'>
             <p className='mb-4'>
               With over a decade of experience in interior design, We have had the privilege of
               transforming countless spaces into beautiful, functional homes. My passion for design

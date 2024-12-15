@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import HomepageCard from './Card/homepageCard'
 
 const Service = () => {
-  const { title, subTitle, services, serviceList } = servicesData
+  const { title, subTitle, services } = servicesData
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
@@ -42,7 +42,9 @@ const Service = () => {
             {subTitle}
           </div>
         </div>
-        <div className={clsx('grid md:grid-cols-3 grid-cols-2 gap-8 ', 'mx-auto', 'mb-4')}>
+        <div
+          className={clsx('grid md:grid-cols-3 sm:grid-cols-2  grid-cols-1 gap-8 ', 'mx-auto', 'mb-4')}
+        >
           {services.map((service, index) => {
             return (
               <HomepageCard

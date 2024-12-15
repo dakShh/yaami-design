@@ -41,7 +41,7 @@ const Header = () => {
             'overflow-hidden',
             'w-full font-bold rounded transition-all',
             'absolute top-[75px]',
-            'z-[300]',
+            'z-[80]',
             'text-center'
           )}
         >
