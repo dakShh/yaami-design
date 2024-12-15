@@ -2,7 +2,6 @@ import React from 'react'
 
 import clsx from 'clsx'
 import Header from '../Components/Header'
-import Footer from '../Components/Footer'
 import Banner1 from '../assets/about/banner-2.jpg'
 import PrimaryButton from '../Components/Buttons/primary-button'
 
@@ -25,7 +24,7 @@ const AboutUs = () => {
           backgroundPositionY: '25%',
           backgroundPositionX: '30%'
         }}
-        className={clsx('relative', 'h-[450px] ', 'flex flex-col justify-center items-center', 'mb-5')}
+        className={clsx('relative', 'h-[250px]', 'flex flex-col justify-center items-center', 'mb-5')}
       >
         <div className='w-full h-full bg-black/70 absolute'></div>
 
@@ -38,18 +37,17 @@ const AboutUs = () => {
         </div>
       </div>
       <div className='container mx-auto min-h-screen mb-20'>
-        <div className='mx-auto  py-6 '>
+        {/* <div className='mx-auto  py-6 '>
           <h1 className='text-3xl font-bold text-center'>Yaami Designs</h1>
-          {/* <p className='mt-2'>Transforming Spaces, Enriching Lives</p> */}
-        </div>
+        </div> */}
         <section>
-          <div className='px-5 mb-7 w-full' data-aos='zoom-in' data-aos-delay='100'>
+          <div className='mb-7 w-full' data-aos='zoom-in' data-aos-delay='100'>
             <div
               className={clsx(
                 'z-[100] relative',
                 'container mx-auto',
                 'grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-6',
-                'py-10 px-5 w-full',
+                'py-10 px-5 w-full my-20',
                 'bg-neutral-800 text-white',
                 'drop-shadow-md'
               )}
@@ -73,7 +71,7 @@ const AboutUs = () => {
                     <div
                       data-aos='fade-up'
                       data-aos-delay='700'
-                      className='max-w-[80px] text-md md:text-base text-white/60 font-extralight py-2'
+                      className='max-w-[80px] text-sm text-white/60 font-extralight py-2'
                     >
                       {stat.title}
                     </div>
@@ -84,12 +82,11 @@ const AboutUs = () => {
           </div>
         </section>
         <section className='border-b border-white/40 pb-8 gap-8 items-center'>
-          <div className='flex  justify-center'>
-            {/* <h2 className='text-2xl font-semibold mb-4'>Yaami Designs</h2> */}
+          <div className='flex  justify-center gap-x-10 text-md'>
             <p className='mb-4'>
-              {
-                'With over a decade of experience in interior design, Ive had the privilege of transforming countless spaces into beautiful, functional homes. My passion for design started early, and Ive honed my skills through years of study and hands-on experience.'
-              }
+              With over a decade of experience in interior design, We have had the privilege of
+              transforming countless spaces into beautiful, functional homes. My passion for design
+              started early, and Ive honed my skills through years of study and hands-on experience.
             </p>
             <p className='mb-4'>
               At Yaami Designs, I believe that every space has the potential to be extraordinary. My
@@ -107,14 +104,14 @@ const AboutUs = () => {
           </div> */}
         </section>
 
-        <section className='mt-5'>
-          <h2 className='text-3xl font-bold mb-6 text-center'>Why Choose Yaami Designs?</h2>
+        <section className=''>
+          <h2 className='text-3xl font-bold my-10 text-center'>Why Choose Yaami Designs?</h2>
           <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-6'>
             <div>
               <div className='p-6 flex flex-col items-center text-center'>
-                <FaPaintBrush className='h-12 w-12  mb-4' />
-                <h3 className='font-semibold mb-2'>Design That Speaks to You</h3>
-                <p className='text-sm'>
+                <FaPaintBrush className='h-12 w-12 mb-4 text-5xl' />
+                <h3 className='font-bold mb-2 text-2xl'>Design That Speaks to You</h3>
+                <p className='text-sm text-white/60'>
                   Every corner of your space deserves attention. We take a holistic approach, considering
                   everything from colors and textures to layout and lighting. Our goal? To create a
                   cohesive look that feels effortlessly put together and truly reflects your lifestyle.
@@ -123,9 +120,9 @@ const AboutUs = () => {
             </div>
             <div>
               <div className='p-6 flex flex-col items-center text-center'>
-                <BiMessageCheck className='h-12 w-12  mb-4' />
-                <h3 className='font-semibold mb-2'>Communication Is Key</h3>
-                <p className='text-sm'>
+                <BiMessageCheck className='h-12 w-12 mb-4 text-5xl' />
+                <h3 className='font-bold mb-2 text-2xl'>Communication Is Key</h3>
+                <p className='text-sm text-white/60'>
                   We believe that good design starts with great conversations. You’ll be involved in the
                   process every step of the way—no surprises here! We keep you in the loop and welcome
                   your ideas, ensuring that the final result is a space you’ll absolutely love.
@@ -134,9 +131,9 @@ const AboutUs = () => {
             </div>
             <div>
               <div className='p-6 flex flex-col items-center text-center'>
-                <FaHandshake className='h-12 w-12  mb-4' />
-                <h3 className='font-semibold mb-2'>A Friendly Team</h3>
-                <p className='text-sm'>
+                <FaHandshake className='h-12 w-12 mb-4 text-5xl' />
+                <h3 className='font-bold mb-2 text-2xl'>A Friendly Team</h3>
+                <p className='text-sm text-white/60'>
                   We’re more than just designers; we’re your partners in this journey! Communication is
                   key, and we love keeping the conversation going. You’ll always know what’s happening,
                   and your input will shape the process every step of the way.
@@ -146,7 +143,7 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className='mt-12 text-center '>
+        <section className='mt-32 text-center '>
           <h2 className='text-2xl font-semibold mb-4'>Ready to Transform Your Space?</h2>
           <p className='mb-6'>
             {` Let's create a home that reflects your personality and meets your needs.`}
