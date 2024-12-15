@@ -4,10 +4,17 @@ import clsx from 'clsx'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Banner1 from '../assets/about/banner-2.jpg'
+import PrimaryButton from '../Components/Buttons/primary-button'
+
+import { FaPaintBrush } from 'react-icons/fa'
+import { BiMessageCheck } from 'react-icons/bi'
+import { FaHandshake } from 'react-icons/fa'
+import { companyStats } from '../Utils/data'
+import Footer2 from '../Components/Footer2'
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className='bg-secondary relative w-full'>
       <Header />
 
       <div
@@ -18,53 +25,136 @@ const AboutUs = () => {
           backgroundPositionY: '25%',
           backgroundPositionX: '30%'
         }}
-        className={clsx('relative', 'h-[320px] ', 'flex flex-col justify-center items-center', 'my-5')}
+        className={clsx('relative', 'h-[450px] ', 'flex flex-col justify-center items-center', 'mb-5')}
       >
         <div className='w-full h-full bg-black/70 absolute'></div>
 
         <div
-          className='font-extrabold text-5xl z-50 text-center mb-3'
+          className='text-white font-extrabold text-5xl z-50 text-center mb-3'
           data-aos='fade-down'
           data-aos-delay='200'
         >
-          About US
-        </div>
-        <div className='font-thin text-md z-50 ' data-aos='fade-down' data-aos-delay='300'>
-          Home / About US
+          About us
         </div>
       </div>
-
-      <div className='container mx-auto min-h-[50vh]'>
-        <div className={clsx('flex justify-center items-center', ' mx-6 mb-10')}>
-          <div className={clsx('md:pt-5 md:px-10 md:pb-10', 'pt-5 px-0  pb-20')}>
-            <p data-aos='fade-up' data-aos-delay='800' className='text-3xl mb-5'>
-              YAAMI DESIGNS
-            </p>
+      <div className='container mx-auto min-h-screen mb-20'>
+        <div className='mx-auto  py-6 '>
+          <h1 className='text-3xl font-bold text-center'>Yaami Designs</h1>
+          {/* <p className='mt-2'>Transforming Spaces, Enriching Lives</p> */}
+        </div>
+        <section>
+          <div className='px-5 mb-7 w-full' data-aos='zoom-in' data-aos-delay='100'>
             <div
-              data-aos='fade-up'
-              data-aos-delay='1000'
-              className='text-md md:text-2xl font-extralight text-justify'
+              className={clsx(
+                'z-[100] relative',
+                'container mx-auto',
+                'grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-6',
+                'py-10 px-5 w-full',
+                'bg-neutral-800 text-white',
+                'drop-shadow-md'
+              )}
             >
-              {`  It is a long established fact that a reader will be distracted by the readable content of a
-              page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using 'Content here, content
-              here', making it look like readable English. Many desktop publishing packages and web page
-              editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
-              will uncover many web sites still in their infancy. Various versions have evolved over the
-              years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a
-              long established fact that a reader will be distracted by the readable content of a page
-              when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-              normal distribution of letters, as opposed to using 'Content here, content here', making it
-              look like readable English. Many desktop publishing packages and web page editors now use
-              Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many
-              web sites still in their infancy. Various versions have evolved over the years, sometimes
-              by accident, sometimes on purpose (injected humour and the like).`}
+              {companyStats.map((stat, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={clsx(
+                      'flex flex-col lg:flex-row gap-x-1',
+                      'text-center items-center lg:text-left lg:items-start'
+                    )}
+                  >
+                    <div
+                      data-aos='fade-up'
+                      data-aos-delay='500'
+                      className='font-extrabold text-5xl md:text-6xl'
+                    >
+                      {stat.value}
+                    </div>
+                    <div
+                      data-aos='fade-up'
+                      data-aos-delay='700'
+                      className='max-w-[80px] text-md md:text-base text-white/60 font-extralight py-2'
+                    >
+                      {stat.title}
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+        <section className='border-b border-white/40 pb-8 gap-8 items-center'>
+          <div className='flex  justify-center'>
+            {/* <h2 className='text-2xl font-semibold mb-4'>Yaami Designs</h2> */}
+            <p className='mb-4'>
+              {
+                'With over a decade of experience in interior design, Ive had the privilege of transforming countless spaces into beautiful, functional homes. My passion for design started early, and Ive honed my skills through years of study and hands-on experience.'
+              }
+            </p>
+            <p className='mb-4'>
+              At Yaami Designs, I believe that every space has the potential to be extraordinary. My
+              approach combines creativity with practicality, ensuring that each design not only looks
+              stunning but also enhances the way you live.
+            </p>
+            {/* <PrimaryButton  */}
+          </div>
+          {/* <div className='mt-6 md:mt-0'>
+            <img
+              src='/placeholder.svg?height=400&width=400'
+              alt='Elara Johnson, Interior Designer'
+              className='rounded-full w-64 h-64 object-cover mx-auto'
+            />
+          </div> */}
+        </section>
 
-      <Footer />
+        <section className='mt-5'>
+          <h2 className='text-3xl font-bold mb-6 text-center'>Why Choose Yaami Designs?</h2>
+          <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-6'>
+            <div>
+              <div className='p-6 flex flex-col items-center text-center'>
+                <FaPaintBrush className='h-12 w-12  mb-4' />
+                <h3 className='font-semibold mb-2'>Design That Speaks to You</h3>
+                <p className='text-sm'>
+                  Every corner of your space deserves attention. We take a holistic approach, considering
+                  everything from colors and textures to layout and lighting. Our goal? To create a
+                  cohesive look that feels effortlessly put together and truly reflects your lifestyle.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className='p-6 flex flex-col items-center text-center'>
+                <BiMessageCheck className='h-12 w-12  mb-4' />
+                <h3 className='font-semibold mb-2'>Communication Is Key</h3>
+                <p className='text-sm'>
+                  We believe that good design starts with great conversations. You’ll be involved in the
+                  process every step of the way—no surprises here! We keep you in the loop and welcome
+                  your ideas, ensuring that the final result is a space you’ll absolutely love.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className='p-6 flex flex-col items-center text-center'>
+                <FaHandshake className='h-12 w-12  mb-4' />
+                <h3 className='font-semibold mb-2'>A Friendly Team</h3>
+                <p className='text-sm'>
+                  We’re more than just designers; we’re your partners in this journey! Communication is
+                  key, and we love keeping the conversation going. You’ll always know what’s happening,
+                  and your input will shape the process every step of the way.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className='mt-12 text-center '>
+          <h2 className='text-2xl font-semibold mb-4'>Ready to Transform Your Space?</h2>
+          <p className='mb-6'>
+            {` Let's create a home that reflects your personality and meets your needs.`}
+          </p>
+          <PrimaryButton size='lg' content={'Contact us'} />
+        </section>
+      </div>
+      <Footer2 />
     </div>
   )
 }

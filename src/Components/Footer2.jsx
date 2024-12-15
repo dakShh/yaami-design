@@ -10,7 +10,7 @@ import logoDark from '../assets/logo/logo-white-transparent.png'
 const Footer2 = () => {
   const navigate = useNavigate()
   return (
-    <footer className='bg-secondary shadow'>
+    <footer className='bg-secondary'>
       <div className='container w-full mx-auto p-4 md:py-8  '>
         <div
           className={clsx(
