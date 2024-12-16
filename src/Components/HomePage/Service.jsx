@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import HomepageCard from './Card/homepageCard'
 
 const Service = () => {
-  const { title, subTitle, services, serviceList } = servicesData
+  const { title, subTitle, services } = servicesData
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {

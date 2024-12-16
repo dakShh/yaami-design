@@ -41,18 +41,6 @@ export const aboutData = {
 export const servicesData = {
   title: 'Solutions',
   subTitle: 'Tailored solutions to transform your space',
-  serviceList: [
-    'Design Concept',
-    'Floor Layout',
-    'Floor Covering',
-    'Electrical',
-    'False Ceiling',
-    'Custom Furniture',
-    'Modular Furniture',
-    'Painting',
-    'Catalog Furniture',
-    'Deep Cleaning'
-  ],
   services: [
     {
       title: 'Residential Interior',
@@ -63,16 +51,14 @@ export const servicesData = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ligula aliquam, lobortis odio eu, consequat nibh.',
       serviceList: [
-        'Design Concept / Discution',
         'Floor Layout',
         'Floor Covering',
         'Electrical',
         'False Ceiling',
-        'Custome Furniture',
+        'Custom Furniture',
         'Modular Furniture',
         'Painting',
         'Catlouge Furniture',
-        'Painting',
         'Deep Cleaning'
       ]
     },
