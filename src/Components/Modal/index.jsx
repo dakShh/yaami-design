@@ -8,7 +8,8 @@ import emailjs from '@emailjs/browser'
 
 const defaultValues = {
   name: '',
-  number: ''
+  number: '',
+  message: ''
 }
 
 const templateId = import.meta.env.VITE_TEMPLATE_ID
@@ -34,7 +35,8 @@ const Modal = ({ state, handleModal }) => {
     let params = {
       name: values.name,
       number: values.number,
-      to_name: 'Ritesh'
+      to_name: 'Ritesh',
+      message: values.message
     }
     emailjs.send(serviceId, templateId, params, publicKey).then(
       (result) => {
@@ -130,6 +132,31 @@ const Modal = ({ state, handleModal }) => {
                   placeholder={'+91-XXXXXXXXXX'}
                   errorMessage={errors?.number?.message ?? ''}
                 />
+              </div>
+
+              <div className='col-span-2'>
+                <label
+                  htmlFor='message'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+                >
+                  Message
+                </label>
+                {/* <Input
+                  name='message'
+                  register={register}
+                  className={`${errors.message && 'border-red-600 focus:border-red-600'}`}
+                  type={'message'}
+                  placeholder={'Write a message..'}
+                  errorMessage={errors?.message?.message ?? ''}
+                /> */}
+                <textarea
+                  name='message'
+                  {...register('message')}
+                  placeholder='Write a message..'
+                  className={clsx(
+                    'py-3 px-5 block w-full  rounded-full text-sm focus:border-neutral-500 focus:ring-none focus:outline-none disabled:opacity-50 disabled:pointer-events-none text-white bg-transparent border border-neutral-500 placeholder:text-neutral-500 '
+                  )}
+                ></textarea>
               </div>
             </div>
             <PrimaryButton
