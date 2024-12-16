@@ -43,7 +43,7 @@ const ContactUs = () => {
         <div className='w-full h-full bg-black/70 absolute'></div>
 
         <div
-          className='font-extrabold text-5xl z-50 text-center mb-3'
+          className='font-extrabold  xl:text-5xl text-2xl  z-50 mt-10 lg:mt-0 text-center mb-3'
           data-aos='fade-down'
           data-aos-delay='200'
         >
@@ -51,7 +51,7 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <div className='container mx-auto mt-20 z-50 relative '>
+      <div className='container mx-auto mt-20 z-50 relative px-8 sm:px-0 '>
         <div className='mx-auto max-w-xl bg-neutral-800 shadow-xl py-10 px-12 rounded-xl'>
           <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-y-8'>
             <div>
@@ -104,7 +104,7 @@ const ContactUs = () => {
             </div>
           </form>
         </div>
-        <div className='grid grid-cols-3 my-24 gap-x-16 px-4'>
+        <div className='grid md:grid-cols-3 grid-cols-1 my-24 gap-16 px-4'>
           <InfoBlock
             icon={<MdEmail className={'h-12 w-12 mb-4 text-5xl'} />}
             title={'Email us'}
