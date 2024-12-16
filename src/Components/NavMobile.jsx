@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react'
 
 // ** Data import
-import { navData } from "../Utils/data";
-import { useNavigate } from "react-router-dom";
+import { navData } from '../Utils/data'
+import { useNavigate } from 'react-router-dom'
 
 const NavMobile = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
-    <ul className="flex flex-col py-3">
+    <ul className='flex flex-col py-3 relative z-[60]'>
       {navData.map((item, index) => {
         return (
-          <li className="py-4" key={index} onClick={() => navigate(`${item.href}`)}>
-            <div className="text-white ">{item.name}</div>
+          <li className='py-4' key={index} onClick={() => navigate(`${item.href}`)}>
+            <div className='text-white '>{item.name}</div>
           </li>
-        );
+        )
       })}
     </ul>
-  );
-};
+  )
+}
 
-export default NavMobile;
+export default NavMobile

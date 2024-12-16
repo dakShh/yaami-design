@@ -56,7 +56,7 @@ const Portfolio = () => {
         <div className='w-full h-full bg-black/70 absolute'></div>
 
         <div
-          className='font-extrabold text-5xl z-50 text-center mb-3'
+          className='font-extrabold  xl:text-5xl text-2xl  z-50 mt-10 lg:mt-0 text-center mb-3'
           data-aos='fade-down'
           data-aos-delay='200'
         >
@@ -65,7 +65,11 @@ const Portfolio = () => {
       </div>
       <section className={clsx('my-32')}>
         <div
-          className={clsx('grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4', 'w-full px-20', 'gap-2')}
+          className={clsx(
+            'grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4',
+            'w-full px-5 md:px-20',
+            'gap-2'
+          )}
         >
           {portfolios.map((image, index) => {
             return (
