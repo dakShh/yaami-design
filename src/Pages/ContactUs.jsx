@@ -43,7 +43,7 @@ const ContactUs = () => {
         <div className='w-full h-full bg-black/70 absolute'></div>
 
         <div
-          className='font-extrabold  xl:text-5xl text-2xl  z-50 mt-10 lg:mt-0 text-center mb-3'
+          className='font-extrabold  xl:text-5xl text-2xl  z-[1] mt-10 lg:mt-0 text-center mb-3'
           data-aos='fade-down'
           data-aos-delay='200'
         >
