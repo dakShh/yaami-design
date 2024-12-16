@@ -1,18 +1,22 @@
 import clsx from 'clsx'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Input from '../Input/input'
 import PrimaryButton from '../Buttons/primary-button'
 
 import { useForm } from 'react-hook-form'
+import emailjs from '@emailjs/browser'
 
 const defaultValues = {
   name: '',
   number: ''
 }
 
+const templateId = import.meta.env.VITE_TEMPLATE_ID
+const serviceId = import.meta.env.VITE_SERVICE_ID
+const publicKey = import.meta.env.VITE_PUBLIC_KEY
+
 const Modal = ({ state, handleModal }) => {
   const [show, setShow] = useState(false)
-
   const form = useForm({
     defaultValues
   })
@@ -20,11 +24,30 @@ const Modal = ({ state, handleModal }) => {
   const {
     handleSubmit,
     register,
-    formState: { errors }
+    formState: { errors },
+    reset
   } = form
 
+  const formRef = useRef()
+
   const onSubmit = (values) => {
-    console.log('values: ', values)
+    let params = {
+      name: values.name,
+      number: values.number,
+      to_name: 'Ritesh'
+    }
+    emailjs.send(serviceId, templateId, params, publicKey).then(
+      (result) => {
+        console.log('result', result)
+        reset()
+        setShow(false)
+      },
+      (error) => {
+        reset()
+        setShow(false)
+        console.log('error', error)
+      }
+    )
   }
 
   useEffect(() => {
@@ -59,7 +82,7 @@ const Modal = ({ state, handleModal }) => {
               X<span className='sr-only'>Close modal</span>
             </button>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} className='p-4 md:p-5'>
+          <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className='p-4 md:p-5'>
             <div className='grid gap-7 mb-4 grid-cols-2'>
               <div className='col-span-2'>
                 <label
