@@ -29,7 +29,7 @@ const AboutUs = () => {
         <div className='w-full h-full bg-black/70 absolute'></div>
 
         <div
-          className='text-white font-extrabold text-5xl z-50 text-center mb-3'
+          className='font-extrabold  xl:text-5xl text-2xl  z-[1] mt-10 lg:mt-0 text-center mb-3'
           data-aos='fade-down'
           data-aos-delay='200'
         >
